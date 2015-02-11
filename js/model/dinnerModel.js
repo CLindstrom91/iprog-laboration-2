@@ -6,7 +6,7 @@ var DinnerModel = function() {
 	var numbGuest = 3;
 
 	this.setNumberOfGuests = function(num) {
-		numbGuest = num;
+		numbGuest += num;
 	}
 
 	// should return 
