@@ -9,3 +9,7 @@ function plus() {
 	num++;
     document.getElementById('numberOfGuests').innerHTML=num;
 }
+
+function next() {
+    window.location.href = "index.html";
+}
