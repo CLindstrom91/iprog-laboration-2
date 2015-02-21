@@ -3,6 +3,6 @@ $(function() {
 	var model = new DinnerModel();
 	
 	//And create the needed controllers and views
-	var selectDishView = new selectDishView($("#selectDishView"), model);
+	var selectView = new SelectView($("#selectView"), model);
 
 });
