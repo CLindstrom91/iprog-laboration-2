@@ -4,14 +4,15 @@ var DinnerModel = function() {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var selectedDishes = new Object();
+	var numGuest = 3;
 	
 	this.setNumberOfGuests = function(num) {
-		this.numberOfGuests = num;
+		numGuest += num;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
-		return this.numberOfGuests;
+		return numGuest;
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -37,7 +38,6 @@ var DinnerModel = function() {
 		var price = 0;
 		
 		//kod
-		
 		return price;
 		
 	}
@@ -307,22 +307,42 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':200,
-		'name':'Chocolat Ice cream',
+		'name':'Chocolate Ice cream',
 		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'image':'ice.jpg',
+		'description':" First put the dry ingredients in a bowl. Add the milk and cream and mix until combined. Pour the mixture into your ice cream maker and mix according to the directions for your machine. After 30 minutes it is ready to be put into a container to finishing freezing in the freezer.",
 		'ingredients':[{ 
-			'name':'ice cream',
-			'quantity':100,
-			'unit':'ml',
+			'name':'Cocoa powder',
+			'quantity':1,
+			'unit':'cup',
 			'price':6
+			},{
+			'name':'Brown sugar',
+			'quantity':3/4,
+			'unit':'cup',
+			'price':3
+			},{
+			'name':'Milk',
+			'quantity':1/2,
+			'unit':'cup',
+			'price':2
+			},{
+			'name':'Heavy cream',
+			'quantity':3,
+			'unit':'cup',
+			'price':9
+			},{
+			'name':'Vanilla',
+			'quantity':1,
+			'unit':'tablespoon',
+			'price':4
 			}]
 		},{
 		'id':201,
 		'name':'Vanilla Ice cream',
 		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'image':'vanilla.jpg',
+		'description':"Pour everything into the bowl of a mixer or whisk in a bowl by hand. Pour it into your ice cream maker and freeze according to the directions. When it is done, put it into a container and let it freeze for 2 hours or until frozen.",
 		'ingredients':[{ 
 			'name':'ice cream',
 			'quantity':100,
@@ -333,8 +353,8 @@ var DinnerModel = function() {
 		'id':202,
 		'name':'Strawberry',
 		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'image':'strawberry.jpg',
+		'description':"In a bowl, add 1/2 cup sugar to the strawberries. Add the lemon juice. Give this strawberry a good sir and let it sit for 2 hours at room temperature. After two hours, the strawberries will have let go of their juice and created a yummy syrup.",
 		'ingredients':[{ 
 			'name':'ice cream',
 			'quantity':100,

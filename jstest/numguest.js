@@ -11,5 +11,5 @@ function plus() {
 }
 
 function next() {
-    window.location.href = "index.html";
+    window.location.href = "indextest.html";
 }
