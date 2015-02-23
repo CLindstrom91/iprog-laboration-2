@@ -35,12 +35,13 @@ var DinnerModel = function() {
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		var price = 0;
+		var price = 24;
 		
 		//kod
 		return price;
 		
 	}
+	
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
@@ -48,7 +49,7 @@ var DinnerModel = function() {
 		var dish = this.getDish(id); 
 		var type = dish.type;
 		
-		selectedDished[type]= id;
+		selectedDishes[type]= id;
 	}
 
 	//Removes dish from menu
@@ -56,10 +57,11 @@ var DinnerModel = function() {
 		var dish = this.getDish(id); 
 		var type = dish.type;
 		
-		if(selectedDished[type] === id){
-			delete selectedDished[type];
+		if(selectedDishes[type] === id){
+			delete selectedDishes[type];
 		}
 	}
+
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
