@@ -43,6 +43,62 @@ var DinnerModel = function() {
 		
 	}
 
+	this.getQuantity = function(id) {
+		quantity = "";
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			quantity += ingredient.quantity +'</br>';
+		}
+
+		return quantity;	
+		
+	}
+	
+	this.getUnit = function(id) {
+		unit = "";
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			unit += ingredient.unit +'</br>';
+		}
+
+		return unit;	
+		
+	}
+
+	this.getIngredientPrice = function(id) {
+		price = "";
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			price += 'SEK ' + ingredient.price +'</br>';
+		}
+
+		return price;	
+		
+	}
+	
+	this.pending = function(id) {
+		price = 0;
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			price += ingredient.price;
+		}
+
+		return '<div class="col-md-4"><br>Pending: SEK '+ price +'</div>';	
+		
+	}
+
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getDishPrice = function(id) {
 
@@ -335,7 +391,7 @@ var DinnerModel = function() {
 		'image':'ice.jpg',
 		'description':" First put the dry ingredients in a bowl. Add the milk and cream and mix until combined. Pour the mixture into your ice cream maker and mix according to the directions for your machine. After 30 minutes it is ready to be put into a container to finishing freezing in the freezer.",
 		'ingredients':[{ 
-			'name':'Cocoa powder',
+			'name':'Cocoa',
 			'quantity':1,
 			'unit':'cup',
 			'price':6

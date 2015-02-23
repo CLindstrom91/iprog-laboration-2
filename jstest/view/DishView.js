@@ -7,6 +7,10 @@ var SelectView = function (container, model) {
 	
 	this.getDishes = function() {
 	var name = model.getAllIngredients(200);
+	var quantity = model.getQuantity(200);
+	var unit = model.getUnit(200);
+	var price = model.getIngredientPrice(200);
+	var pending = model.pending(200);
 		var div = '';
 		div += '<div class="row">';
 		for(i=0;i<1;i++){
@@ -20,7 +24,7 @@ var SelectView = function (container, model) {
 		}
 		
 		div += "</div>";
-		div += "<div class='row'><div class='col-md-5'><center><h2>Ingredients</h2><p>"+ name +"</p></center></div></div>";
+		div += "<div class='row'><div class='col-md-5'><center><h2>Ingredients</h2></center><br><div id='quantity' class='col-md-3'>"+ quantity +"</div><div id='amount' class='col-md-3'>"+ unit +"</div><div id='name' class='col-md-3'>"+ name +"</div><div id='price' class='col-md-3'>"+ price +"</div></div><div id='pending' class='col-md-5'>"+ pending +"</div><center><button class='btn btn-default' type='submit' style='margin: 4% 4% 4% 4%;'>Confirm Dish</button></center></div></div>";
 		return div;
 
 	};
