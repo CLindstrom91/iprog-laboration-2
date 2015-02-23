@@ -13,3 +13,6 @@ function plus() {
 function next() {
     window.location.href = "indextest.html";
 }
+function singlepage() {
+    window.location.href = "singledish.html";
+}

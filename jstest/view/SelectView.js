@@ -12,7 +12,7 @@ var SelectView = function (container, model) {
 			var dish = get[i];
 			div += "<div class='col-md-3' style='margin:2% 4% 4% 4%;'><br />"
 			div += "<center><img src=images/"+dish.image+" width=100%></center><br/><br/>";
-			div += "<div id='foodhead'><center><button class='btn btn-default' type='submit' style='margin:0% 0% 10% 0%;'>"+dish.name+"</button></center></div>";
+			div += "<div id='foodhead'><center><button class='btn btn-default' type='submit' onclick='singlepage()' style='margin:0% 0% 10% 0%;'>"+dish.name+"</button></center></div>";
 			div += "<p>"+dish.description +"</p></div>"
 		}
 		

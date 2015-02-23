@@ -28,17 +28,38 @@ var DinnerModel = function() {
 		return selectedDishes;
 	}
 
-	//Returns all ingredients for all the dishes on the menu.
-	this.getAllIngredients = function() {
-	
+	//Returns all ingredients for all the dishes on the menu... //gets ingredients from a specifik ID!!! 
+	this.getAllIngredients = function(id) {
+		name = "";
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			name += ingredient.name +'</br>';
+		}
+
+		return name;	
+		
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
+	this.getDishPrice = function(id) {
+
+		var price = 0;
+
+		var dish = this.getDish(id);
+		var ingredients = dish.ingredients;
+
+		for (i=0; i<ingredients.length; i++){
+			var ingredient = ingredients[i];
+			price += ingredient.price;
+		}
+
+		return (price*numGuest);
+	}	
+	
 	this.getTotalMenuPrice = function() {
-		var price = 24;
-		
-		//kod
-		return price;
 		
 	}
 	
@@ -353,7 +374,7 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':202,
-		'name':'Strawberry',
+		'name':'Strawberry Ice cream',
 		'type':'dessert',
 		'image':'strawberry.jpg',
 		'description':"In a bowl, add 1/2 cup sugar to the strawberries. Add the lemon juice. Give this strawberry a good sir and let it sit for 2 hours at room temperature. After two hours, the strawberries will have let go of their juice and created a yummy syrup.",

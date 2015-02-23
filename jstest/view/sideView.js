@@ -1,5 +1,5 @@
 //ExampleView Object constructor
-var ExampleView = function (container,model) {
+var SideView = function (container,model) {
 	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
@@ -16,7 +16,7 @@ var ExampleView = function (container,model) {
 	
 	//type list
 	
-	var type = ['starter', 'main', 'dessert'];
+	var type = ['starter', 'main', 'starter'];
 	var selected = model.getFullMenu();
 	
 	this.fullPrice = function() {
