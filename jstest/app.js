@@ -4,8 +4,8 @@ $(function() {
 	
 	//add selected dishes
 	
-	model.addDishToMenu(1);
-	model.addDishToMenu(202);
+	//model.addDishToMenu(1);
+	//model.addDishToMenu(202);
 	
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"), model);

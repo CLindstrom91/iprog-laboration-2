@@ -21,7 +21,7 @@ var ExampleView = function (container,model) {
 	
 	this.fullPrice = function() {
 
-		var output = 0;	
+		var output = 0.00;	
 			
 			for(k = 0; k < 3; k++) {
 		
@@ -37,7 +37,8 @@ var ExampleView = function (container,model) {
 						if(type[k] == 'starter'){
 						var id = selected.dessert;
 						output += model.getDishPrice(id);	
-					}			
+					}	
+					
 				}
     		k++;
 			return output;
@@ -52,7 +53,7 @@ var ExampleView = function (container,model) {
 			var output = "";	
 			
 			for(k = 0; k < 3; k++) {
-		
+			
     			if(selected[type[k]]){
 					if(type[k] == 'starter'){
 						var id = selected.starter;
@@ -66,6 +67,9 @@ var ExampleView = function (container,model) {
 						var id = selected.dessert;
 						output += model.getDishPrice(id) + "<br>";	
 					}			
+				}
+					else{
+					output += "0.00";
 				}
     		k++;
 			return output;
@@ -96,6 +100,9 @@ var ExampleView = function (container,model) {
 						var t = model.getDish(id);
 						output += t.name + "<br>";
 					}			
+				}
+				else{
+					output += "Pending";
 				}
     		k++;
 			return output;
