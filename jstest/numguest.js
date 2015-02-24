@@ -17,6 +17,14 @@ function singlepage() {
     window.location.href = "singledish.html";
 }
 
-function back() {
+function dish() {
     window.location.href = "dishpage.html";
+}
+
+function overview() {
+    window.location.href = "dinnerOverview.html";
+}
+
+function print() {
+    window.location.href = "printpage.html";
 }

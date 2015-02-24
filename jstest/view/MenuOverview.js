@@ -8,7 +8,7 @@ var SelectView = function (container, model) {
 		
 		var div = '';
 		var price=0;
-			div += '<div class="row">';
+			div += '<center><div class="row">';
 				var selected = model.getFullMenu();
 
 				var type = ['starter', 'main', 'dessert'];
@@ -36,15 +36,15 @@ var SelectView = function (container, model) {
 						var p = model.getDishPrice(id);
 						price += p;
 						div += "<div class='col-md-2' style='margin: 2% 2% 2% 2%'><center><h2>"+ t.name+ "</h2><img src=images/"+t.image+" width=100%><br/><h5>"+ p +" SEK</h5></center></div>";
-						div += '<div class="col-md-3"><h2>Total price: '+ price +' KR</h2><br><center><button class="btn btn-default" type="submit">Print full recipe!</button></center></div>';
-					}	
+						div += '<div class="col-md-12"><h2>Total price: '+ price +' KR</h2><br><button class="btn btn-default" type="submit" onlick="print()">Print full recipe!</button></div>';
+					}
 					
 				}
     		k++;
 			return div;
 		}
 			
-			div += '</div>';
+			div += '</div></center>';
 		return div;
 	};
 		
