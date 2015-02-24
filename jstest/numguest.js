@@ -1,4 +1,4 @@
-num = 0;
+/*num = 0;
 
 function minus() {
 	num--;
@@ -8,7 +8,7 @@ function minus() {
 function plus() {
 	num++;
     document.getElementById('numberOfGuests').innerHTML=num;
-}
+}*/
 
 function next() {
     window.location.href = "indextest.html";
@@ -25,6 +25,6 @@ function overview() {
     window.location.href = "dinnerOverview.html";
 }
 
-function print() {
+function p() {
     window.location.href = "printpage.html";
 }

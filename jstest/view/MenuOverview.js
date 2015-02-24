@@ -36,7 +36,7 @@ var SelectView = function (container, model) {
 						var p = model.getDishPrice(id);
 						price += p;
 						div += "<div class='col-md-2' style='margin: 2% 2% 2% 2%'><center><h2>"+ t.name+ "</h2><img src=images/"+t.image+" width=100%><br/><h5>"+ p +" SEK</h5></center></div>";
-						div += '<div class="col-md-12"><h2>Total price: '+ price +' KR</h2><br><button class="btn btn-default" type="submit" onlick="print()">Print full recipe!</button></div>';
+						div += '<div class="col-md-12"><h2>Total price: '+ price +' KR</h2><br><button class="btn btn-default" type="submit" onclick="p()" >Print full recipe!</button></div>';
 					}
 					
 				}
