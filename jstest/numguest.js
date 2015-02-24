@@ -16,3 +16,7 @@ function next() {
 function singlepage() {
     window.location.href = "singledish.html";
 }
+
+function back() {
+    window.location.href = "dishpage.html";
+}

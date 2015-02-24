@@ -3,8 +3,7 @@ var SelectView = function (container, model) {
 	this.allDishes = container.find("#allDishes");
 	
 	var get = model.getAllDishes('dessert');
-	
-	
+		
 	this.getDishes = function() {
 	var name = model.getAllIngredients(200);
 	var quantity = model.getQuantity(200);
